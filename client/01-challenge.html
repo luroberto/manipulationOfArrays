@@ -1,0 +1,54 @@
+<!-- hacer un array on una lista de tareas, recorrerlas 
+    y marchar con un check las que esten completas -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const tasks = [
+        {
+            name: 'Make dinner',
+            done: false
+        },
+        {
+            name: 'Identify resources to be monitored.',
+            done: true
+        },
+        {
+            name: 'Define users and workflow',
+            done: false
+        },
+        {
+            name: 'Identify tasks and URLs by resource type.',
+            done: false
+        },
+        {
+            name: 'Order console machines.',
+            done: true
+        }
+        ];
+
+        const app = document.getElementById('app');
+
+        tasks.forEach(task => {
+            app.innerHTML += ` 
+                <li id="check-list">
+                ${task.name}  
+                <input type="checkbox" ${task.done && 'checked'}>
+                </<li> `;
+            })
+
+            
+    </script>
+
+
+</body>
+</html>
